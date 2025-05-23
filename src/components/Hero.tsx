@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { SplashCursor } from "@/components/ui/splash-cursor";
 
 const Hero = () => (
-  <section className="hero-bg min-h-screen flex items-center pt-24 pb-12">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
+  <section className="hero-bg min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
+    <SplashCursor />
+    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 relative z-10">
       <div className="md:w-1/2 text-center md:text-left">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow animate-bounce">
           Genesis Art into Your World
