@@ -80,7 +80,7 @@ function SplashCursor({
       config.SHADING = false;
     }
 
-    function getWebGLContext(canvas: unknown) {
+    function getWebGLContext(canvas: HTMLCanvasElement) {
       const params = {
         alpha: true,
         depth: false,
@@ -88,31 +88,31 @@ function SplashCursor({
         antialias: false,
         preserveDrawingBuffer: false,
       };
-      let gl = (canvas as HTMLCanvasElement).getContext("webgl2", params) as WebGL2RenderingContext | WebGLRenderingContext | null;
+      let gl = canvas.getContext("webgl2", params) as WebGL2RenderingContext | WebGLRenderingContext | null;
       const isWebGL2 = !!gl && (gl instanceof WebGL2RenderingContext);
       if (!isWebGL2)
         gl =
-          (canvas as HTMLCanvasElement).getContext("webgl", params) as WebGLRenderingContext | null ||
-          (canvas as HTMLCanvasElement).getContext("experimental-webgl", params) as WebGLRenderingContext | null;
-      let halfFloat;
-      let supportLinearFiltering;
+          canvas.getContext("webgl", params) as WebGLRenderingContext | null ||
+          canvas.getContext("experimental-webgl", params) as WebGLRenderingContext | null;
+      let halfFloat: any;
+      let supportLinearFiltering: boolean | undefined;
       if (!gl) throw new Error("Unable to get WebGL context");
       if (isWebGL2) {
         (gl as WebGL2RenderingContext).getExtension("EXT_color_buffer_float");
-        supportLinearFiltering = gl.getExtension("OES_texture_float_linear");
+        supportLinearFiltering = gl.getExtension("OES_texture_float_linear") as boolean | undefined;
       } else {
         halfFloat = gl.getExtension("OES_texture_half_float");
         supportLinearFiltering = gl.getExtension(
           "OES_texture_half_float_linear"
-        );
+        ) as boolean | undefined;
       }
       gl.clearColor(0.0, 0.0, 0.0, 1.0);
       const halfFloatTexType = isWebGL2
         ? (gl as WebGL2RenderingContext).HALF_FLOAT
         : halfFloat && halfFloat.HALF_FLOAT_OES;
-      let formatRGBA;
-      let formatRG;
-      let formatR;
+      let formatRGBA: any;
+      let formatRG: any;
+      let formatR: any;
 
       if (isWebGL2) {
         formatRGBA = getSupportedFormat(
@@ -270,6 +270,7 @@ function SplashCursor({
     function compileShader(type: any, source: any, keywords: any) {
       source = addKeywords(source, keywords);
       const shader = gl.createShader(type);
+      if (!shader) return null;
       gl.shaderSource(shader, source);
       gl.compileShader(shader);
       if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS))
@@ -1280,7 +1281,6 @@ function SplashCursor({
     });
 
     updateFrame();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     SIM_RESOLUTION,
     DYE_RESOLUTION,
