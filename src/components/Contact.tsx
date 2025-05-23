@@ -17,10 +17,10 @@ const Contact = () => {
       form.current,
       'q3RoWKQusixcwHgIq' // replace with your EmailJS public key
     )
-    .then((result) => {
+    .then(() => {
       alert('Mensaje enviado!');
       form.current?.reset();
-    }, (error) => {
+    }, () => {
       alert('Error al enviar el mensaje.');
     });
   };

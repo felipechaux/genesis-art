@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { ref, get, onValue, off } from "firebase/database";
 import ArtCard from "./ArtCard";
+import type { DataSnapshot } from "firebase/database";
 
 // Define the artwork type
 interface Artwork {
@@ -20,9 +21,10 @@ const Gallery = () => {
     const galleryRef = ref(db, "gallery");
     setLoading(true);
     setError(null);
-    const handleValue = (snapshot: any) => {
-      if (snapshot.exists()) {
-        const data = snapshot.val();
+    const handleValue = (snapshot: unknown) => {
+      const snap = snapshot as DataSnapshot;
+      if (snap.exists()) {
+        const data = snap.val();
         const arts = Object.values(data) as Artwork[];
         setArtworks(arts);
       } else {

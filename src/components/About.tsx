@@ -19,7 +19,7 @@ const About = () => (
           Hola, soy Genesis Lopez, una pintora apasionada inspirada por los vibrantes colores y emociones del mundo. Creo arte que conecta profundamente con las personas, iluminando hogares y corazones. Cada pintura es única, creada con amor y visión.
         </p>
         <p className="text-gray-600">
-          Thank you for supporting original art. <span className="text-pink-500 font-bold">Let's make your space unforgettable!</span>
+          Thank you for supporting original art. <span className="text-pink-500 font-bold">Let&apos;s make your space unforgettable!</span>
         </p>
       </div>
     </div>
