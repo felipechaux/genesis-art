@@ -5,11 +5,11 @@ const About = () => (
     <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 mb-10 md:mb-0">
         <Image
-          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80"
+          src="https://storage.googleapis.com/bucket-genesis-art/genesis.jpeg"
           alt="Artist"
           width={256}
           height={256}
-          className="w-64 mx-auto rounded-full border-4 border-indigo-200 shadow-xl"
+          className="w-90 mx-auto rounded-full border-4 border-indigo-200 shadow-xl"
           style={{ objectFit: 'cover' }}
         />
       </div>
@@ -19,7 +19,7 @@ const About = () => (
           Hola, soy Genesis Lopez, una pintora apasionada inspirada por los vibrantes colores y emociones del mundo. Creo arte que conecta profundamente con las personas, iluminando hogares y corazones. Cada pintura es única, creada con amor y visión.
         </p>
         <p className="text-gray-600">
-          Thank you for supporting original art. <span className="text-pink-500 font-bold">Let&apos;s make your space unforgettable!</span>
+        Gracias por apoyar el arte original. <span className="text-pink-500 font-bold">¡Hagamos que tu espacio sea inolvidable!</span>
         </p>
       </div>
     </div>

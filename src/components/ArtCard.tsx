@@ -23,7 +23,7 @@ const ArtCard = ({ title, medium, price, image, alt }: ArtCardProps) => (
       <p className="text-gray-600 mb-4">
         {medium} <span className="block text-lg font-bold text-indigo-600">{price}</span>
       </p>
-      <a href="#contact" className="inline-block px-5 py-2 bg-indigo-500 text-white rounded font-semibold hover:bg-pink-500 transition">Buy Now</a>
+      <a href="#contact" className="inline-block px-5 py-2 bg-indigo-500 text-white rounded font-semibold hover:bg-pink-500 transition">Comprar</a>
     </div>
   </div>
 );

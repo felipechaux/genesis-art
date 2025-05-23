@@ -6,20 +6,20 @@ const Hero = () => (
     <SplashCursor />
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 relative z-10">
       <div className="md:w-1/2 text-center md:text-left">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow animate-bounce">
-          Genesis Art into Your World
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow">
+          Genesis Art
         </h1>
         <p className="text-xl text-white/90 mb-8 max-w-xl mx-auto md:mx-0 animate-fadeIn">
         Descubre obras maestras pintadas a mano que aportan color, emoción e inspiración a tus espacios. Cada pieza cuenta una historia única.
         </p>
-        <a href="#gallery" className="inline-block px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition">
+        <a href="#gallery" className="inline-block px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition animate-bounce">
           Explora la Galeria
         </a>
       </div>
       <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
         <div className="relative group">
           <Image
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80"
+            src="https://storage.googleapis.com/bucket-genesis-art/genesis-logo.png"
             alt="Featured Painting"
             width={320}
             height={384}
