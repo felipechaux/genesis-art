@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WhatsAppButton = () => {
-  const phoneNumber = '+56 962679745'; // Replace with the actual phone number
+  const phoneNumber = '56962679745'; // Removed spaces and + for WhatsApp API
   const message = 'Hola! Me interesa alguna pintura, me puedes ayudar?';
 
   const handleClick = () => {
