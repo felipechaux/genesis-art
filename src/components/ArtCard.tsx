@@ -6,9 +6,10 @@ type ArtCardProps = {
   price: string;
   image: string;
   alt: string;
+  available?: boolean;
 };
 
-const ArtCard = ({ title, medium, price, image, alt }: ArtCardProps) => (
+const ArtCard = ({ title, medium, price, image, alt, available }: ArtCardProps) => (
   <div className="fade-in bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition group">
     <Image
       src={image}
@@ -19,7 +20,14 @@ const ArtCard = ({ title, medium, price, image, alt }: ArtCardProps) => (
       style={{ objectFit: 'cover' }}
     />
     <div className="p-6">
-      <h3 className="text-2xl font-bold mb-2 group-hover:text-pink-600 transition">{title}</h3>
+      <h3 className="text-2xl font-bold mb-2 group-hover:text-pink-600 transition flex items-center gap-2">
+        {title}
+        {available !== undefined && (
+          <span className={`ml-2 px-3 py-1 rounded-full text-xs font-semibold ${available ? 'bg-green-100 text-green-700 border border-green-300' : 'bg-gray-200 text-gray-500 border border-gray-300'}`}>
+            {available ? 'Disponible' : 'No disponible'}
+          </span>
+        )}
+      </h3>
       <p className="text-gray-600 mb-4">
         {medium} <span className="block text-lg font-bold text-indigo-600">{price}</span>
       </p>

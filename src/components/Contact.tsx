@@ -32,7 +32,7 @@ const Contact = () => {
         <form ref={form} onSubmit={sendEmail} className="bg-white rounded-2xl p-8 shadow-xl fade-in">
           <div className="mb-4">
             <label className="block mb-2 font-semibold" htmlFor="name">Nombre</label>
-            <input name="user_name" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" type="text" id="name" placeholder="Your Name" required />
+            <input name="user_name" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" type="text" id="name" placeholder="Tu Nombre" required />
           </div>
           <div className="mb-4">
             <label className="block mb-2 font-semibold" htmlFor="email">Email</label>
@@ -40,7 +40,7 @@ const Contact = () => {
           </div>
           <div className="mb-6">
             <label className="block mb-2 font-semibold" htmlFor="message">Mensaje</label>
-            <textarea name="message" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" id="message" rows={4} placeholder="Interested in a painting? Ask here!" required />
+            <textarea name="message" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" id="message" rows={4} placeholder="Estas interesado en alguna pintura? Preguntame aqui!" required />
           </div>
           <button type="submit" className="w-full py-3 bg-pink-500 hover:bg-indigo-500 text-white font-bold rounded-lg transition">Enviar</button>
         </form>
