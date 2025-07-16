@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <main>
       <Navbar />
       <Hero />
       <Gallery />
@@ -37,6 +37,6 @@ export default function Home() {
       <Contact />
       <Footer />
       <WhatsAppButton />
-    </>
+    </main>
   );
 }
