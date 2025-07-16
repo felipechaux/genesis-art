@@ -1,0 +1,33 @@
+{
+  "name": "Galería Expresiva - Genesis Art",
+  "short_name": "Genesis Art",
+  "description": "Galería de arte que ofrece pinturas originales hechas a mano",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a5b4fc",
+  "orientation": "portrait-primary",
+  "categories": ["art", "gallery", "paintings"],
+  "lang": "es-CL",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://storage.googleapis.com/bucket-genesis-art/genesis-logo.png",
+      "sizes": "320x384",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+} 

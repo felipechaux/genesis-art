@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const WhatsAppButton = () => {
-  const phoneNumber = '56962679745'; // Removed spaces and + for WhatsApp API
-  const message = 'Hola! Me interesa alguna pintura, me puedes ayudar?';
+  const phoneNumber = "56962679745"; // Removed spaces and + for WhatsApp API
+  const message = "Hola! Me interesa alguna pintura, me puedes ayudar?";
 
   const handleClick = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
     <button
       onClick={handleClick}
       className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
-      aria-label="Contact on WhatsApp"
+      aria-label="Contactar por WhatsApp"
+      title="Contactar por WhatsApp"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +29,4 @@ const WhatsAppButton = () => {
   );
 };
 
-export default WhatsAppButton; 
+export default WhatsAppButton;
