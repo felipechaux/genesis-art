@@ -30,6 +30,7 @@ const Hero = () => (
             className="w-80 h-96 object-cover rounded-3xl shadow-2xl border-4 border-white transition-transform duration-700 group-hover:rotate-3 group-hover:scale-105"
             style={{ objectFit: "cover" }}
             role="img"
+            priority
           />
           <div
             className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-indigo-400/30 to-pink-400/30 opacity-0 group-hover:opacity-100 transition"
